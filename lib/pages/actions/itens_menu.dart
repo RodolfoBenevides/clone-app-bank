@@ -53,7 +53,7 @@ class ItensMenu extends StatelessWidget {
             margin: const EdgeInsets.only(bottom: 10),
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-                color: greyColor, borderRadius: BorderRadius.circular(48)),
+                color: greyColor, borderRadius: BorderRadius.circular(45)),
             child: Icon(icon),
           ),
           Text(name, style: const TextStyle(fontWeight: FontWeight.bold)),
