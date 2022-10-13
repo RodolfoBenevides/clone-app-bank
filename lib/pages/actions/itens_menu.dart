@@ -17,6 +17,7 @@ class ItensMenu extends StatelessWidget {
             _itemMenu(
               icon: MdiIcons.clover,
               name: 'Àrea Pix',
+              isFirst: true,
             ),
             _itemMenu(
               icon: MdiIcons.barcode,
@@ -44,16 +45,18 @@ class ItensMenu extends StatelessWidget {
     );
   }
 
-  _itemMenu({required IconData icon, required String name}) {
+  _itemMenu({required IconData icon, required String name, bool? isFirst}) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 7),
+      padding: (isFirst ?? false)
+          ? const EdgeInsets.only(right: 7, left: 20)
+          : const EdgeInsets.symmetric(horizontal: 7),
       child: Column(
         children: [
           Container(
             margin: const EdgeInsets.only(bottom: 10),
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-                color: greyColor, borderRadius: BorderRadius.circular(48)),
+                color: graynu, borderRadius: BorderRadius.circular(48)),
             child: Icon(icon),
           ),
           Text(name, style: const TextStyle(fontWeight: FontWeight.bold)),
